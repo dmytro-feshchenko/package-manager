@@ -1,0 +1,15 @@
+{
+  "name": "unicorn-package-manager",
+  "version": "1.0.0",
+  "description": "Nice featured Package Manager",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technoboom/package-manager.git"
+  },
+  "author": "technoboom <feschenko.dmitryi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.7.1"
+  }
+}
