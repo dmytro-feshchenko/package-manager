@@ -9,6 +9,10 @@ import fs from 'fs-extra';
  * @returns {Promise|*}
  */
 async function fetchPackage({ name, reference }) {
+    // checks if the given reference is a file path
+    if (['/', './', '../'].some(prefix => reference.startsWith(prefix))) {
+        return await fs.readFile(reference);
+    }
     // checks if a given reference is a valid version
     if (semver.valid(reference)) {
         // we should to convert the given reference to URL for downloading from Yarn
